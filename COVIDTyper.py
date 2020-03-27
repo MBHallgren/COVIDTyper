@@ -99,7 +99,7 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     ccphylo_path = exepath + "ccphylo/ccphylo"
 
 
-    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -mc 1 -nm 0 -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy", templatename, target_dir, target_dir)
+    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -f 3 -nm 30000 -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy", templatename, target_dir, target_dir)
     os.system(cmd)
 
 
