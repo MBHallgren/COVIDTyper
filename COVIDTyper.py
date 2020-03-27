@@ -10,7 +10,7 @@ import sys
 import os
 import argparse
 import time
-import CoronaTyperFunctions as mtf
+import COVIDTyperFunctions as mtf
 
 
 parser = argparse.ArgumentParser(description='.')
@@ -21,8 +21,8 @@ parser.add_argument("-bc", action="store", type=float, default = 0.7, dest="bc",
 parser.add_argument("-db", action="store", type=str, default = "", dest="ref_kma_database", help="Comeplete path for the ref_kma_database for KMA mapping")
 parser.add_argument("-thread", action="store", default = 1, dest="multi_threading", help="Set this parameter to x-number of threads that you would like to use during KMA-mapping.")
 parser.add_argument("-ref", action="store", type=str, default = "", dest="reference", help="KMA will by default determine the best template against the given database. However, if you want to align your query sequences against a reference of your own choice, use this function. If this is left blank, KMA will determine the optimal reference.")
-parser.add_argument('-version', action='version', version='CoronaTyper 1.0.0', help = "current version of CoronaTyper")
-parser.add_argument("-exepath", action="store", dest="exepath", default = "", help="Complete path to the CoronaTyper repo that you cloned, in which the executables are located")
+parser.add_argument('-version', action='version', version='COVIDTyper 1.0.0', help = "current version of COVIDTyper")
+parser.add_argument("-exepath", action="store", dest="exepath", default = "", help="Complete path to the COVIDTyper repo that you cloned, in which the executables are located")
 parser.add_argument("-o", action="store", dest="output_name", help="Name that you would like the output directory to be called.")
 args = parser.parse_args()
 
@@ -58,7 +58,7 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     # Print messages
 
     startTime = time.time()
-    print("# Running CoronaTyper 1.0.0 with following input conditions:", file=logfile)
+    print("# Running COVIDTyper 1.0.0 with following input conditions:", file=logfile)
     mtf.logfileConditionsResearch(logfile, bc, ref_kma_database, multi_threading, reference, output_name, paired_end)
     if paired_end == True:
         print("# -pe", file=logfile)
@@ -99,8 +99,7 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     ccphylo_path = exepath + "ccphylo/ccphylo"
 
 
-    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -mc 1 -nm 0 {} -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy",
-                                                                               templatename, target_dir, target_dir)
+    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -mc 1 -nm 0 -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy", templatename, target_dir, target_dir)
     os.system(cmd)
 
 
@@ -121,9 +120,9 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     mtf.cleanUp(target_dir, illumina_files, nanopore_files, paired_end, reference)
     endTime = time.time()
     dTime = endTime - startTime
-    print("CoronaTyper total runtime: " + str(dTime) + " seconds", file=logfile)
+    print("COVIDTyper total runtime: " + str(dTime) + " seconds", file=logfile)
     logfile.close()
-    print ("CoronaTyper has completed")
+    print ("COVIDTyper has completed")
 
     mtf.varriansfileRenamer(total_filenames)
 

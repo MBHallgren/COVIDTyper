@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71fa860f-f9e9-4ee0-8cc9-24ef7f231ee2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CoronaTyper" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaTyper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoronaTyper" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CoronaTyperInstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoronaTyperInstall.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoronaTyper">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CoronaTyperFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="101" column="55" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
+            <state relative-caret-position="165">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoronaTyper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1860">
+              <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
               <folding>
                 <element signature="e#144#154#0" expanded="true" />
               </folding>
@@ -26,19 +35,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoronaTyperFunctions.py">
+        <entry file="file://$PROJECT_DIR$/CoronaTyperInstall.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
-              <caret line="21" column="71" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="71" />
+            <state relative-caret-position="45">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CoronaTyperInstall.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../database/seqsplit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="210">
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -50,14 +59,18 @@
       <find>mask</find>
       <find>prune</find>
       <find>dcm</find>
-      <find>MINTyper</find>
       <find>binpath</find>
-      <find>path</find>
       <find>kma_p</find>
+      <find>MINTyper</find>
+      <find>path</find>
+      <find>CoronaTyper</find>
+      <find>covidtyper</find>
     </findStrings>
     <replaceStrings>
-      <replace>CoronaTyper</replace>
       <replace>exepath</replace>
+      <replace>CoronaTyper</replace>
+      <replace>covidtyper</replace>
+      <replace>COVIDTyper</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -68,7 +81,10 @@
       <list>
         <option value="$PROJECT_DIR$/CoronaTyperFunctions.py" />
         <option value="$PROJECT_DIR$/CoronaTyper" />
+        <option value="$PROJECT_DIR$/../database/covid19files/seqsplit.py" />
+        <option value="$PROJECT_DIR$/../database/seqsplit.py" />
         <option value="$PROJECT_DIR$/CoronaTyperInstall.py" />
+        <option value="$PROJECT_DIR$/CoronaTyper.py" />
       </list>
     </option>
   </component>
@@ -148,13 +164,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CoronaTyperFunctions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="21" column="71" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoronaTyper">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1515">
@@ -165,10 +174,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../database/covid19files/seqsplit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../database/seqsplit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CoronaTyperInstall.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="45">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoronaTyper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+          <folding>
+            <element signature="e#144#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoronaTyperFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>

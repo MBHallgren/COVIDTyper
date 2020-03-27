@@ -1,7 +1,7 @@
 import  os
-cmd = "chmod a+x CoronaTyper"
+cmd = "chmod a+x COVIDTyper.py"
 os.system(cmd)
-cmd = "chmod a+x CoronaTyperFunctions.py"
+cmd = "chmod a+x COVIDTyperFunctions.py"
 os.system(cmd)
 #Kma
 cmd = "git clone https://bitbucket.org/genomicepidemiology/kma.git"
