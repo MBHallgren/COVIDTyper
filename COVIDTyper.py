@@ -99,7 +99,7 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     ccphylo_path = exepath + "ccphylo/ccphylo"
 
 
-    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -f 3 -nm 30000 -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy", templatename, target_dir, target_dir)
+    cmd = "{} dist -i {}*.fsa -o {}{} -r \"{}\" -f 9 -nm 0 -nv {}nucleotideVarriance &>> {}distance_matrix_logfile".format(ccphylo_path, target_dir, target_dir, "distmatrix.phy", templatename, target_dir, target_dir)
     os.system(cmd)
 
 
@@ -122,7 +122,12 @@ def researchPipeline(i_path_illumina, i_path_nanopore, paired_end, bc,
     dTime = endTime - startTime
     print("COVIDTyper total runtime: " + str(dTime) + " seconds", file=logfile)
     logfile.close()
+
+    cmd = "cat {}DataFiles/*.vcf.gz > {}combined.vcf.gz".format(target_dir, target_dir)
+    print (cmd)
+    os.system(cmd)
     print ("COVIDTyper has completed")
+
 
     mtf.varriansfileRenamer(total_filenames)
 
