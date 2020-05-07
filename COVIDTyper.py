@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright (c) 2019, Malte Bjørn Hallgren Technical University of Denmark
+# Copyright (c) 2020, Malte Bjørn Hallgren Technical University of Denmark
 # All rights reserved.
 #
 
@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='.')
 parser.add_argument('-i_path_illumina', action="store", type=str, dest='i_path_illumina', default="", help='The path to the directory containing ONLY the input illumina files. Should be used when analyzing >5 read-files at a time.')
 parser.add_argument('-i_path_nanopore', action="store", type=str, dest='i_path_nanopore', default="", help='The path to the directory containing ONLY the input nanopore files. Should be used when analyzing >5 read-files at a time.')
 parser.add_argument('-i_mfa', action="store", type=str, dest='i_mfa', default="", help='Multi fasta assembly input. Only takes one single multi fasta file as input. Please give complete path to the file, not the directory.')
-parser.add_argument('-assemblies', action="store_true", dest='assemblies', default=False, help='Use this option if you are using assemblies and not raw reads.')
+parser.add_argument('-i_path_assemblies', action="store", type=str, dest='i_path_assemblies', default="", help='The path to the directory containing the assembly files')
 parser.add_argument("-pe", action="store_true", dest="paired_end", default = False, help="If paipred ends are used give input as True (-pe True). If Paired-ends are used, it is important that the files are written in the correct order, such as: sample1_1.fasta sample1_2.fasta sample2_1.fasta sample2_1.fasta")
 parser.add_argument("-bc", action="store", type=float, default = 0.7, dest="bc", help="Base calling parameter for nanopore KMA mapping. Default is 0.7")
 parser.add_argument("-db", action="store", type=str, default = "", dest="ref_kma_database", help="Comeplete path for the ref_kma_database for KMA mapping")
@@ -30,8 +30,9 @@ args = parser.parse_args()
 
 def researchPipeline(i_path_illumina, i_path_nanopore, i_mfa, paired_end, bc,
                      ref_kma_database, multi_threading, reference, output_name, exepath, assemblies):
-    if assemblies == True:
+    if assemblies != "":
         assembly_flag = True
+        i_path_illumina = assemblies
     else:
         assembly_flag = False
 
@@ -183,7 +184,7 @@ def main():
     if inputCheck == "":
         sys.exit("No input was given.")
 
-    researchPipeline(args.i_path_illumina, args.i_path_nanopore, args.i_mfa, args.paired_end, args.bc, args.ref_kma_database, args.multi_threading, args.reference, args.output_name, args.exepath, args.assemblies)
+    researchPipeline(args.i_path_illumina, args.i_path_nanopore, args.i_mfa, args.paired_end, args.bc, args.ref_kma_database, args.multi_threading, args.reference, args.output_name, args.exepath, args.i_path_assemblies)
 if __name__== "__main__":
     main()
 
