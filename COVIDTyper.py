@@ -180,7 +180,7 @@ def researchPipeline(i_path_illumina, i_path_nanopore, i_mfa, paired_end, bc,
     mtf.varriansfileRenamer(total_filenames)
 
 def main():
-    inputCheck = args.i_path_illumina + args.i_path_nanopore + args.i_mfa
+    inputCheck = args.i_path_illumina + args.i_path_nanopore + args.i_mfa + args.i_path_assemblies
     if inputCheck == "":
         sys.exit("No input was given.")
 

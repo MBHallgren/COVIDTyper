@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71fa860f-f9e9-4ee0-8cc9-24ef7f231ee2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/COVIDTyper.py" beforeDir="false" afterPath="$PROJECT_DIR$/COVIDTyper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COVIDTyperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/COVIDTyperFunctions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/COVIDTyper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-232">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="267">
+              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
               <folding>
                 <element signature="e#144#154#0" expanded="true" />
               </folding>
@@ -24,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/COVIDTyperFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3045">
-              <caret line="217" column="23" selection-start-line="217" selection-start-column="23" selection-end-line="217" selection-end-column="23" />
+            <state relative-caret-position="1963">
+              <caret line="298" selection-start-line="298" selection-end-line="298" />
             </state>
           </provider>
         </entry>
@@ -57,6 +58,8 @@
       <find>CoronaTyper</find>
       <find>vcf</find>
       <find>i_path_mfa</find>
+      <find>mapping_re</find>
+      <find>mapping_results</find>
     </findStrings>
     <replaceStrings>
       <replace>exepath</replace>
@@ -64,6 +67,7 @@
       <replace>covidtyper</replace>
       <replace>COVIDTyper</replace>
       <replace>i_mfa</replace>
+      <replace>mapping</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -81,10 +85,11 @@
         <option value="$PROJECT_DIR$/../hpc/week8/week8.py" />
         <option value="$PROJECT_DIR$/../hpc/week9/week9.py" />
         <option value="$PROJECT_DIR$/COVIDTyper.py" />
+        <option value="$PROJECT_DIR$/COVIDTyperFunctions.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -145,11 +150,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="850" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49312377" visible="true" weight="0.26037195" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.50687623" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939759" visible="true" weight="0.26037195" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5060241" side_tool="true" visible="true" weight="0.26037195" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -157,7 +162,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32849604" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -198,13 +203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/COVIDTyperFunctions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="217" column="23" selection-start-line="217" selection-start-column="23" selection-end-line="217" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/COVIDTyperInstall.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -214,11 +212,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/COVIDTyper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="267">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
           <folding>
             <element signature="e#144#154#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/COVIDTyperFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1963">
+          <caret line="298" selection-start-line="298" selection-end-line="298" />
         </state>
       </provider>
     </entry>
